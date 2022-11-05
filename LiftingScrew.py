@@ -8,15 +8,17 @@ class LiftingScrew(Component):
         self._height = height
 
     def increaseHeight(self, value):
+        print("Raising lifting screw...")
         if self._height + value >= LiftingScrew.MAX_HEIGHT:
             self._height = LiftingScrew.MAX_HEIGHT
+            print("Raised to max height.")
         else:
             self._height += value
-        print("Raising lifting screw...")
+        
 
     def decreaseHeight(self, value):
+        print("Lowering lifting screw...")
         if self._height - value <= 0:
             self._height = 0
         else:
             self._height -= value
-        print("Lowering lifting screw...")
