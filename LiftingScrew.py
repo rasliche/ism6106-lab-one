@@ -1,12 +1,18 @@
 from Component import Component
 
 class LiftingScrew(Component):
-    def __init__(self, status, height):
+    MAX_HEIGHT = 5
+    
+    def __init__(self, status, height=0):
         super().__init__(status)
         self._height = height
         
-    def raise(self):
+    def increaseHeight(self, value):
         print("Raising lifting screw...")
 
-    def lower(self):
+    def decreaseHeight(self, value):
+        if self._height - value <= 0:
+            self._height = 0
+        else:
+            self._height -= value
         print("Lowering lifting screw...")
