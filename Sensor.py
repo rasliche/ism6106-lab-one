@@ -4,6 +4,10 @@ class Sensor(Component):
     def __init__(self, status):
         super().__init__(status)
 
+    """
+    Detect obstacles or reference barcodes,
+    depending on type of sensor.
+    """
     def detect():
         print("Detecting...")
 
