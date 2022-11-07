@@ -6,7 +6,11 @@ class LiftingScrew(Component):
     def __init__(self, status, height=0):
         super().__init__(status)
         self._height = height
+        print("Initialized a LiftingScrew with starting heigh of {self._height}")
 
+    """
+    Raise the lifting screw by passing a value.
+    """
     def increaseHeight(self, value):
         print("Raising lifting screw...")
         if self._height + value >= LiftingScrew.MAX_HEIGHT:
@@ -14,11 +18,16 @@ class LiftingScrew(Component):
             print("Raised to max height.")
         else:
             self._height += value
+            print("Raised to {self._height}.")
         
-
+    """
+    Lower the lifting screw by passing a value.
+    """
     def decreaseHeight(self, value):
         print("Lowering lifting screw...")
         if self._height - value <= 0:
             self._height = 0
+            print("Lowered to 0.")
         else:
             self._height -= value
+            print("Lowered to {self._height}.")
