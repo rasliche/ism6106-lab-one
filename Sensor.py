@@ -22,3 +22,9 @@ class InfraredSensor(Sensor):
 class CameraSensor(Sensor):
     def __init__(self, status):
         super().__init__(status)
+
+    """
+    Read a barcode either on the ground or on a shelf
+    """
+    def captureBarcode():
+        print("Reading barcode...")
