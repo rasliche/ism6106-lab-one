@@ -3,8 +3,8 @@ from Component import Component
 class LiftingScrew(Component):
     MAX_HEIGHT = 5
 
-    def __init__(self, status, height=0):
-        super().__init__(status)
+    def __init__(self, height=0):
+        super().__init__(type="Lifting Screw")
         self._height = height
         print("Initialized a LiftingScrew with starting heigh of {self._height}")
 

@@ -5,13 +5,14 @@ class Component():
     """
     Initialize with a status of 'ok' by default
     """
-    def __init__ (self, status="ok"):
+    def __init__ (self, status="ok", type="OVERRIDE") -> None:
         self._status = status
+        self._type = type
 
     """
     Run diagnostics for component.
     """
-    def diagnose(self):
+    def diagnose(self) -> str:
         print(self._status)
 
     """

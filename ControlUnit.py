@@ -6,8 +6,8 @@ Movement, diagnostics, communication with hivemind goes through
 this class.
 """
 class ControlUnit(Component):
-    def __init__(self, status):
-        super().__init__(status)
+    def __init__(self):
+        super().__init__(type="Control Unit")
 
     """
     Ask all composition components to run diagnostics and
@@ -15,3 +15,6 @@ class ControlUnit(Component):
     """
     def requestDiagnostics():
         print("Requesting diagnostics of components...")
+
+    def route():
+        print("routing to destination...")
