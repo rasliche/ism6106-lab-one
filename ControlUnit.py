@@ -16,5 +16,8 @@ class ControlUnit(Component):
     def requestDiagnostics():
         print("Requesting diagnostics of components...")
 
-    def route():
+    def processCommand(self, text):
+        print(text)
+
+    def route(self):
         print("routing to destination...")

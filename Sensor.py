@@ -1,8 +1,8 @@
 from Component import Component
 
 class Sensor(Component):
-    def __init__(self, status):
-        super().__init__(status)
+    def __init__(self):
+        super().__init__(type="Sensor")
 
     """
     Detect obstacles or reference barcodes,
@@ -20,11 +20,11 @@ class InfraredSensor(Sensor):
         super().__init__(status)
 
 class CameraSensor(Sensor):
-    def __init__(self, status):
-        super().__init__(status)
+    def __init__(self):
+        super().__init__()
 
     """
     Read a barcode either on the ground or on a shelf
     """
-    def captureBarcode():
+    def captureBarcode(self):
         print("Reading barcode...")
